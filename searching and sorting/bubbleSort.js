@@ -1,6 +1,6 @@
 function bubbleSort(arr){
     const swap = (arr1, indx1, indx2) =>{
-        [arr[indx1], arr[indx2]] = [arr[indx2], arr[indx1]];
+        [arr[indx1], arr[indx2]] = [arr[indx2], arr[indx1]]; //swap
     }
 
     for(let i=arr.length; i>0; i--){
