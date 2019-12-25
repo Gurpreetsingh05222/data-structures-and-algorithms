@@ -90,6 +90,15 @@ class DoublyLikedList{
 		}
 		return current;
 	}
+
+	set(index, val){
+		let nodeFound = this.get(index);
+		if(nodeFound != null){
+			nodeFound.val = val;
+			return true;
+		}
+		return false;
+	}
 }
 
 let list = new  DoublyLikedList();
