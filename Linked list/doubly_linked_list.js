@@ -1,3 +1,4 @@
+//Doubly linked list implementation
 class Node{
 	constructor(val){
 		this.val = val;
@@ -12,7 +13,7 @@ class DoublyLikedList{
 		this.tail = null;
 		this.length = 0;
 	}
-	//Pushing values to the list
+	
 	push(val){
 		let newNode = new Node(val);
 		if(this.length === 0){
@@ -98,6 +99,23 @@ class DoublyLikedList{
 			return true;
 		}
 		return false;
+	}
+
+	insert(index, val){
+		if(index < 0 || index > this.length) return false;
+		if(index === 0) return this.unshift(val);
+		if(index === this.length) return this.push(val);
+		
+		let newNode = new Node(val);
+		let beforeNode = this.get(index - 1);
+		let afterNode = beforeNode.next;
+		
+		beforeNode.next = newNode;
+		newNode.prev = beforeNode;
+		newNode.next = afterNode;
+		afterNode.prev = newNode;
+		this.length++;
+		return true;
 	}
 }
 
