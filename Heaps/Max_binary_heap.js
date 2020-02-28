@@ -13,7 +13,7 @@ class MaxBinaryHeap{
         while(idx > 0){
             let parentIdx = Math.floor((idx - 1)/2);
             let parent = this.value[parentIdx];
-            if(element <= parent)break;
+            if(element <= parent) break;
             this.value[parentIdx] = element;
             this.values[idx] = parent;
             idx = parentIdx;
