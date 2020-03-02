@@ -1,0 +1,12 @@
+Pseudocode for Binary search -
+->This function accepts a sorted arrays and a value.
+->Create a left pointer at the start of the array and a right pointer at the end.
+->While the left pointer comes before the right pointer.
+    -Create a pointer in middle.
+    -If you find the value you want return.
+    -If the value is small, move the left pointer up.
+    -If the valie is large, move the right pointer down.
+-> If you don't find the value, return "Not Found" or -1.
+
+BIG O of Binary search-
+Best case - O(1)  Worst case- O(log n)
