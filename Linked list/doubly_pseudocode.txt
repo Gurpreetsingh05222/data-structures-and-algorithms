@@ -1,0 +1,43 @@
+Doubly linked list -
+
+Pushing-
+->Create a new node with the value passed to the function.
+->If the head property is null set the head and tail to be the newly created node.
+->If not, set the next property on the tail to be that node.
+->Set the previous property on the newly created node to be tail.
+->Set the tail to be the newly created node.
+->Increment the length.
+->Return the doubly linked list.
+
+Pop -
+->If there is no head, return undefined.
+->Store the current tail in a variable to return later.
+->If length is 1, set the headand tail to be null.
+->Update the tail to be the previous node.
+->Set the new tail next to null.
+->Decrement the length.
+->Return the value removed.
+
+Shift -
+->If length is 0, return undefined.
+->Store the current head property in a variable(old head).
+->If length is one -
+    -Set the head to be null.
+    -Set the tail to be null.
+->Update the head to be the next of the old head.
+->Set the head's prev property to null.
+->Set the old head next to null.
+->Decrement the length.
+->Return old head.
+
+Unshift -
+->Create a new node with the value passed to function.
+->If the length is 0 -
+    -Set the head to be the new node.
+    -Set the tail to be the new node.
+->Otherwise
+    -Set the prev property on the head of the list to be the new node.
+    -Set the next property on the new node to be the head property.
+    -Update the head to be the new node.
+->Increment the length.
+->Return the list.
