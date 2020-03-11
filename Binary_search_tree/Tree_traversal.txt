@@ -1,4 +1,5 @@
-Tree traversing pseudocode
+Tree traversing pseudocode-
+
 BFS(Breath first search (Steps iteratively)) -
 ->Create a queue(this can be array) and a variable to store the values of nodes visited.
 ->Place the root node in queue.
@@ -8,3 +9,14 @@ BFS(Breath first search (Steps iteratively)) -
     -If there is a left property on the node dequeued add it to the queue.
     -If there is a right property on the node dequeued add it to the queue.
 ->Return the variable that stores the values.
+
+DFS-PreOrder(steps Recursively)-
+->Create a variable to store the values of nodes visited.
+->Store the root of BST in a variable called current.
+    -Push the value of the node to the variable that stores the value.
+    -If the node has a left property, call the helper function with the left
+    property on the node.
+    -If the node has a right property, call the helper function with the right property
+    on the node.
+->Invoke the helper function with the current variable.
+->Return the array of values.
