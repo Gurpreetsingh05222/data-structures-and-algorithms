@@ -1,0 +1,11 @@
+Insert -
+
+->Push the value into the values property on the heap.
+->Bubble up.
+    -Create a variable called index which is the length of values property -1.
+    -Create a variable called parent index which is the floow of (index - 1)/2.
+    -Keep looping as long as the values element at the parent index is less than
+    the values element at the child index.
+        =- Swap the value of the values element at the parent index with the value
+        of the element property at the child index.
+        =- Set the index to be the parent index, start over!
