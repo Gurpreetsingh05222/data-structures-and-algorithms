@@ -1,4 +1,4 @@
-class HashYable{
+class HashTable{
     constructor(size = 53){
         this.keyMap = new Array(size);
     }
@@ -11,5 +11,18 @@ class HashYable{
          total = (total * prime + value) % this.keyMap.length;
      }
      return total;
- }   
+ }
+ 
+ set(key, value){
+     let index = this._hash(key);
+     if(!this.keyMap[index]){
+        this.keyMap[index] = [];
+     }
+     this.keyMap[index].push([key, value]);
+ }
 }
+
+let ht = new HashTable();
+console.log(ht.set("hello world", "goodbye"));
+console.log(ht.set("i love", "pizza"));
+console.log(ht.set("favourite", "dog"));
