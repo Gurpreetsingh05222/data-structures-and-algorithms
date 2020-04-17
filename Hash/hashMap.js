@@ -20,9 +20,22 @@ class HashTable{
      }
      this.keyMap[index].push([key, value]);
  }
+
+ get(key){
+     let index = this._hash(key);
+     if(this.keyMap[index]){
+        for(let i=0; i<this.keyMap[index].length; i++){
+            if(this.keyMap[index][i][0] === key){
+                return this.keyMap[index][i][1];
+            }
+        }
+     }
+     return undefined;
+ }
 }
 
 let ht = new HashTable();
-console.log(ht.set("hello world", "goodbye"));
-console.log(ht.set("i love", "pizza"));
-console.log(ht.set("favourite", "dog"));
+ht.set("favourite", "dog");
+ht.set("food", "pizza");
+ht.get("favourite");
+console.log(ht);
