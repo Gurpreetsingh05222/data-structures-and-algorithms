@@ -32,10 +32,43 @@ class HashTable{
      }
      return undefined;
  }
+
+ keys(){
+    let keysArr = [];
+    for(let i=0; i<this.keyMap.length; i++){
+        if(this.keyMap[i]){
+            for(let j=0; j<this.keyMap[i].length; j++){
+                if(!keysArr.includes(this.keyMap[i][j][0])){
+                    keysArr.push(this.keyMap[i][j][0]);
+                }
+            }
+        }
+    }
+     return keysArr;
+ }
+
+ values(){
+    let valuesArr = [];
+    for(let i=0; i<this.keyMap.length; i++){
+        if(this.keyMap[i]){
+            for(let j=0; j<this.keyMap[i].length; j++){
+                if(!valuesArr.includes(this.keyMap[i][j][1])){
+                    valuesArr.push(this.keyMap[i][j][1]);
+                }
+            }
+        }
+    }
+     return valuesArr;
+ }
 }
 
-let ht = new HashTable();
-ht.set("favourite", "dog");
-ht.set("food", "pizza");
-ht.get("favourite");
-console.log(ht);
+let ht = new HashTable(17);
+ht.set("red", "1234");
+ht.set("yellow", "12345");
+ht.set("olive", "3456");
+ht.set("salmon", "67");
+ht.set("maroon", "899");
+
+ht.keys().forEach(function(key){
+    console.log(ht.get(key));
+})
