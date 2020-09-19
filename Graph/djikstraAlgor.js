@@ -35,22 +35,3 @@ class Graph{
     return distances;
     }
 }
-let g = new Graph();
-g.addNode("A");
-g.addNode("B");
-g.addNode("C");
-g.addNode("D");
-g.addNode("E");
-g.addNode("F");
-g.addNode("G");
-
-g.addDirectedEdge("A", "C", 100);
-g.addDirectedEdge("A", "B", 3);
-g.addDirectedEdge("A", "D", 4);
-g.addDirectedEdge("D", "C", 3);
-g.addDirectedEdge("D", "E", 8);
-g.addDirectedEdge("E", "F", 10);
-g.addDirectedEdge("B", "G", 9);
-g.addDirectedEdge("E", "G", 50);
-
-console.log(g.djikstraAlgorithm("A"));
